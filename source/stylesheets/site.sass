@@ -1,2 +1,342 @@
 //= require "boilerplate.css"
 //= require "normalize.css"
+//= require "fonts/stylesheet.css"
+//= require "bootstrap-glyphicons.css"
+
+
+//--------------------------
+
+// Variables
+//--------------------------
+//--------------------------
+
+$weddingBlue: #d9edff
+$weddingOrange: #f26a55
+$weddingGray: #ececec
+
+$weddingDarkGray: #3b3b3c
+$weddingWhite: #ffffff
+
+$brand-primary:         $weddingOrange
+$brand-success:         $weddingBlue
+$brand-warning:         $weddingGray
+$brand-danger:          $weddingOrange
+$brand-info:            $weddingBlue
+
+$font-family-sans-serif:  "proxima-nova", sans-serif
+$font-family-serif:       "klinic_slabbook", serif
+$font-family-serif-medium:"klinic_slabmedium", $font-family-serif
+$font-family-base:        $font-family-sans-serif
+$font-size-base:          14px
+
+$link-color: $weddingBlue
+
+$btn-default-color:              $weddingWhite
+$btn-default-bg:                 rgba(255,255,255,0)
+$btn-default-border:             $weddingBlue
+
+$grid-gutter-width: 8px
+
+@import "bootstrap/bootstrap"
+
+
+//--------------------------
+
+// Global Styles
+//--------------------------
+//--------------------------
+body, html
+  height: 100%
+
+.body-border
+  height: 4px
+  background: $weddingBlue
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 5
+
+.wrapper 
+  position: relative
+
+.container 
+  position: relative
+  text-align: center
+
+.btn-small
+  font-weight: 500
+  font-size: 13px
+  padding: 3px 8px
+
+.btn, a
+  -webkit-transition: all 0.4s ease
+  -moz-transition: all 0.4s ease
+  -ms-transition: all 0.4s ease
+  -o-transition: all 0.4s ease
+  transition: all 0.4s ease
+
+
+.btn-default 
+  &:hover, &:active
+    background: $weddingBlue
+    color: $weddingDarkGray
+    border-color: $weddingBlue
+
+h2
+  font-size: 21px
+  font-weight: 600
+  margin-bottom: 0
+  padding-bottom: 0
+
+h3
+  margin-top: 0
+  padding-top: 10px
+  font-size: 20px
+  font-family: $font-family-serif
+
+//--------------------------
+
+// Cover
+//--------------------------
+//--------------------------
+.cover-wrapper
+  background: url("/images/cover.jpg")
+    size: cover
+    attachment: fixed
+    position: 50% 62%
+  height: 100%
+  min-height: 600px
+
+  @media (max-width: $screen-tablet)
+    height: 100% 
+    min-height: 0
+    background-position: 60% 62%
+
+  .cover
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    top: 0
+    padding-bottom: 44px
+    @media (max-width: $screen-tablet)
+      padding-bottom: 0
+      bottom: 10%
+
+  .row
+    width: 100%
+
+  .logo
+    @include make-column(4)
+    text-indent: -10000em
+    height: 100%
+    max-width: 300px
+    background: url("/images/logo-white.svg") no-repeat bottom
+      size: contain
+
+    @media (max-width: $screen-tablet)
+      width: 80%
+      float: none
+      margin: 0 auto
+
+
+  .callout, .date 
+    @include make-column(4)
+    color: $weddingWhite
+    height: 100%
+    position: relative
+
+    @media (max-width: $screen-tablet)
+      display: none
+
+    h3
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      padding-bottom: 70px
+      font-family: $font-family-serif-medium
+      text-shadow: 0 1px 4px rgba(0,0,0,.25)
+      font-size: 23px
+      text-align: center
+
+
+
+//--------------------------
+
+// Intro
+//--------------------------
+//--------------------------
+.intro-wrapper
+  background: $weddingBlue
+
+  p 
+    padding: 70px 10px 30px 10px
+    max-width: 587px
+    margin: 0px auto
+    text-align: center
+    font-family: "klinic_slabbook", serif
+    font-size: 22px
+    color: $weddingDarkGray
+
+  .rsvp-link
+    margin: 0px auto
+    text-align: center
+    padding-bottom: 55px
+
+    .btn 
+      font-weight: 700
+      font-size: 18px
+
+    i 
+      display: block
+      color: rgba(0,0,0,.4)
+      font-size: 13px
+      font-weight: 100
+      font-style: normal
+      padding-top: 3px
+
+
+//--------------------------
+
+// Date-location
+//--------------------------
+//--------------------------
+.date-location-wrapper
+  background: $weddingOrange
+
+  .date-location
+    max-width: 800px
+
+  .date, .location 
+    @include make-column(6)
+    text-align: center
+    padding: 32px 0 
+
+    .glyphicon 
+      font-size: 18px
+      color: $weddingBlue
+      display: block
+      text-align: center
+
+    span
+      display: block
+
+    .date-time, .location-name
+      font-size: 18px
+      text-transform: uppercase
+      color: $weddingWhite
+
+    .date-date, .location-address
+      font-size: 16px
+      text-transform: uppercase
+      color: rgba(0,0,0,.4)
+      padding-bottom: 10px
+
+
+//--------------------------
+
+// Gallery
+//--------------------------
+//--------------------------
+.gallery-wrapper
+  background: $weddingDarkGray
+  padding: 35px 0
+
+  .photo-full, .photo-one-third, .photo-two-third
+    img 
+      width: 100%
+      padding-bottom: 8px
+
+  .photo-full
+    @include make-column(12)
+
+  .photo-one-third
+    @include make-column(4)
+
+  .photo-two-third
+    @include make-column(8)
+
+
+//--------------------------
+
+// Registry
+//--------------------------
+//--------------------------
+.registry-wrapper
+  background: $weddingOrange
+  padding: 34px 0 75px 0
+  color: #fff
+
+  .registry
+    max-width: 587px
+
+  .btn-group
+    padding: 20px
+      top: 30px
+
+    .btn
+      font-size: 17px
+      font-weight: 600
+      padding: 12px 42px
+
+      @media (max-width: $screen-phone)
+        float: none
+        width: 100%
+
+        &:first-child
+          border-top-right-radius: 5px !important
+          border-bottom-left-radius: 0
+        &:nth-child(2)
+          margin-top: -1px
+          border-top-right-radius: 0
+          border-bottom-left-radius: 5px
+
+  p
+    max-width: 500px
+    margin: 0px auto
+    padding-top: 10px
+    font-weight: 100
+
+
+//--------------------------
+
+// Registry
+//--------------------------
+//--------------------------
+.more-info-wrapper
+  background: $weddingGray
+  padding: 44px 0 85px 0  
+
+  .more-info
+    max-width: 650px  
+
+    h3
+      padding-bottom: 40px
+
+  .note
+    @include make-column(6)
+    padding-left: 5px
+    padding-right: 5px
+    padding-bottom: 30px
+    text-align: left
+
+
+    p
+      padding-top: 0
+      margin-top: 0
+      color: #777777
+
+    h4
+      font-weight: 600
+      font-size: 17px
+      padding-bottom: 0
+      margin-bottom: 0
+      padding-top: 10px
+
+  .colophon
+    display: block
+    clear: both 
+    padding-top: 30px
+    padding-bottom: 40px
