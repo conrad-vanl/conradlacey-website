@@ -1,7 +1,6 @@
 //= require "boilerplate.css"
 //= require "normalize.css"
 //= require "fonts/stylesheet.css"
-//= require "bootstrap-glyphicons.css"
 
 //--------------------------
 
@@ -27,6 +26,7 @@ $font-family-serif:       "klinic_slabbook", serif
 $font-family-serif-medium:"klinic_slabmedium", $font-family-serif
 $font-family-base:        $font-family-sans-serif
 $font-size-base:          14px
+$icon-font-path:          "/stylesheets/fonts/"
 
 $link-color: $weddingBlue
 
@@ -127,7 +127,7 @@ h3
     width: 100%
 
   .logo
-    @include make-column(4)
+    @include make-sm-column(4)
     text-indent: -10000em
     height: 100%
     max-width: 300px
@@ -141,7 +141,7 @@ h3
 
 
   .callout, .date 
-    @include make-column(4)
+    @include make-sm-column(4)
     color: $weddingWhite
     height: 100%
     position: relative
@@ -167,6 +167,7 @@ h3
 //--------------------------
 .intro-wrapper
   background: $weddingBlue
+  @include box-shadow(0 -5px 80px rgba(0,0,0,0.15))
 
   p 
     padding: 70px 10px 30px 10px
@@ -207,15 +208,16 @@ h3
     max-width: 800px
 
   .date, .location 
-    @include make-column(6)
+    @include make-sm-column(6)
     text-align: center
     padding: 32px 0 
 
-    .glyphicon 
+    .big-icon 
       font-size: 18px
       color: $weddingBlue
       display: block
       text-align: center
+      padding-bottom: 8px
 
     span
       display: block
@@ -230,6 +232,35 @@ h3
       text-transform: uppercase
       color: rgba(0,0,0,.4)
       padding-bottom: 10px
+      margin-top: -3px
+
+    .btn-small 
+      .caret
+        display: inline-block
+        margin-left: 3px
+
+      .glyphicon
+        font-size: 11px
+        padding-left: 3px
+
+
+
+    .dropdown-menu li, .dropdown-menu a
+      text-align: left
+
+      .glyphicon
+        display: none
+        color: $weddingDarkGray
+      //.ical
+      //  color: #d76766
+      //.outlook
+      //  color: #ffe46d
+      //.google
+      //  color: #194ec0
+      //.hotmail
+      //  color: #0072c5
+      //.yahoo
+      //  color: #66106b
 
 
 //--------------------------
@@ -247,13 +278,13 @@ h3
       padding-bottom: 8px
 
   .photo-full
-    @include make-column(12)
+    @include make-sm-column(12)
 
   .photo-one-third
-    @include make-column(4)
+    @include make-sm-column(4)
 
   .photo-two-third
-    @include make-column(8)
+    @include make-sm-column(8)
 
 
 //--------------------------
@@ -313,7 +344,7 @@ h3
       padding-bottom: 40px
 
   .note
-    @include make-column(6)
+    @include make-sm-column(6)
     padding-left: 5px
     padding-right: 5px
     padding-bottom: 30px

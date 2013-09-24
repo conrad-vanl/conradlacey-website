@@ -1,29 +1,38 @@
 <section class="date-location container">
 
   <div class="date">
-    <i class="glyphicon glyphicon-calendar"> </i>
+    <i class="big-icon glyphicon glyphicon-calendar"> </i>
 
     <span class="date-time">Saturday 5:00 pm</span>
     <span class="date-date">April 5th, 2014</span>
 
     <div class="btn-group">
       <button class="dropdown-toggle btn btn-default btn-small" data-toggle="dropdown">
-        Save date
+        Save date <span class="caret"></span>
       </button>
       <ul class="dropdown-menu" role="menu">
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Another action</a></li>
+        <li role="presentation" class="dropdown-header">Add to your calendar</li>
+        <li><a href="http://ate.so/?kFAybGc+ical">
+          <i class="glyphicon glyphicon-calendar ical"></i> iCal (iPhone, iPad, desktop email)</a></li>
+        <li><a href="http://ate.so/?kFAybGc+outlook">
+          <i class="glyphicon glyphicon-calendar outlook"></i> Outlook Calendar</a></li>
+        <li><a href="http://ate.so/?kFAybGc+google" target="_blank">
+          <i class="glyphicon glyphicon-share-alt google"></i> Google Calendar</a></li>
+        <li><a href="http://ate.so/?kFAybGc+hotmail" target="_blank">
+          <i class="glyphicon glyphicon-share-alt hotmail"></i> Hotmail Calendar</a></li>
+        <li><a href="http://ate.so/?kFAybGc+yahoo" target="_blank">
+          <i class="glyphicon glyphicon-share-alt yahoo"></i> Yahoo Calendar</a></li>
       </ul>
     </div>
   </div>
 
   <div class="location">
-    <i class="glyphicon glyphicon-map-marker"> </i>
+    <i class="big-icon glyphicon glyphicon-map-marker"> </i>
 
     <span class="location-name">The Urban Rio Rooftop</span>
     <span class="location-address">1000 14th St. Plano, TX</span>
 
-    <button class="dropdown btn btn-default btn-small">Map it</button>
+    <a class="btn btn-default btn-small" href="https://maps.google.com/maps?expflags=enable_star_based_justifications:true&ie=UTF8&cid=12230299672222273630&q=Rooftop+Event+Spot&iwloc=A&gl=US&hl=en-US" target="_blank">Map it <i class="glyphicon glyphicon-share-alt"> </i></a>
   </div>
 
 </section>
