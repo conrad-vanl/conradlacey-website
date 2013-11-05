@@ -20,7 +20,7 @@
         <meta name="msapplication-TileColor" content="#5A636A"/>
         <meta name="msapplication-TileImage" content="tile-icon-d3b2ef5f.png"/>
 
-        <link rel="stylesheet" href="stylesheets/site-9a29f398.css">
+        <link rel="stylesheet" href="stylesheets/site-5d5eb799.css">
         <script src="javascripts/vendor/modernizr-2.6.1.min-1b464010.js"></script>
         <script type="text/javascript" src="//use.typekit.net/scq6tfz.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -106,25 +106,62 @@
 </div>
 
 <div class="gallery-wrapper wrapper">
-  <section class="gallery container">
+  <section id="gallery-carousel" class="gallery container carousel slide" data-ride="carousel">
 
-  <div class="row">
-    <div class="photo-full">
-      <img src="images/flour-mill-mckinney-0680-7c154684.jpg">
+  <div class="carousel-inner">
+    <div class="item active row">
+      <div class="photo-full centered">
+        <img src="images/flour-mill-mckinney-0680-7c154684.jpg">
+      </div>
+    </div>
+
+    <div class="item row">
+      <div class="photo-one-third hidden-sm hidden-xs">
+        <img src="images/flour-mill-mckinney-0650-1f0e5cc5.jpg">
+      </div>
+
+      <div class="photo-two-third">
+        <img src="images/flour-mill-mckinney-06352-a83eb52c.jpg">
+      </div>
+    </div>
+
+    <div class="item row">
+      <div class="photo-half">
+        <img src="images/flour-mill-mckinney-0711-36f10d0b.jpg">
+      </div>
+      <div class="photo-half hidden-sm hidden-xs">
+        <img src="images/flour-mill-mckinney-0756-4b2d2f94.jpg">
+      </div>
+    </div>
+
+    <div class="item row">
+      <div class="photo-full centered">
+        <img src="images/DSCF6564.JPG">
+      </div>
+    </div>
+
+    <div class="item row">
+      <div class="photo-one-third hidden-xs hidden-sm">
+        <img src="images/first-f491b893.jpg">
+      </div>
+      <div class="photo-two-third">
+        <img src="images/second-0d60ccaf.jpg">
+      </div>
     </div>
   </div>
 
-  <div class="row">
-    <div class="photo-one-third">
-      <img src="images/flour-mill-mckinney-0650-1f0e5cc5.jpg">
-    </div>
-
-    <div class="photo-two-third">
-      <img src="images/flour-mill-mckinney-06352-a83eb52c.jpg">
-    </div>
-  </div>
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#gallery-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#gallery-carousel" data-slide-to="1"></li>
+    <li data-target="#gallery-carousel" data-slide-to="2"></li>
+    <li data-target="#gallery-carousel" data-slide-to="3"></li>
+    <li data-target="#gallery-carousel" data-slide-to="4"></li>
+  </ol>
 
 </section>
+
+
 </div>
 
 <div class="registry-wrapper wrapper">
@@ -134,9 +171,8 @@
   <h3>For those who would like to give us a gift, we created a Honeyfund for our planned travels, as well as a traditional gift registry.</h3>
 
   <div class="btn-group">
-    <!--<a href="#" class="btn btn-default">Honeyfund</a>
-    <a href="#" class="btn btn-default">Gift Registry</a>-->
-    <a class="btn btn-default disabled">Coming soon!</a>
+   <a href="http://www.honeyfund.com/wedding/conradlacey" target="_blank" class="btn btn-default">Honeyfund</a>
+    <a href="http://www.giftregistry360.com/wishlist/conradlacey" target="_blank" class="btn btn-default">Gift Registry</a>
   </div>
 
   <p>
