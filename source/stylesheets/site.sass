@@ -278,20 +278,42 @@ h3
 .gallery-wrapper
   background: $weddingDarkGray
   padding: 35px 0
+  position: relative
 
-  .photo-full, .photo-one-third, .photo-two-third
+  .carousel
+    position: static
+
+  .carousel-inner
+    padding-bottom: 15px
+
+  .row
+    height: 100%
+    overflow: hidden
+
+  .photo-full, .photo-one-third, .photo-two-third, .photo-half
     img 
       width: 100%
       padding-bottom: 8px
 
   .photo-full
-    @include make-sm-column(12)
+    @include make-sm-column(8.35)
 
   .photo-one-third
     @include make-sm-column(4)
 
   .photo-two-third
     @include make-sm-column(8)
+
+  .photo-half
+    @include make-sm-column(6)
+
+  .centered
+    margin: 0px auto
+    float: none
+
+  .carousel-indicators
+    position: absolute
+    bottom: 8px
 
 
 //--------------------------
