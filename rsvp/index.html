@@ -21,7 +21,7 @@
         <meta name="msapplication-TileImage" content="tile-icon.png"/>
 
         <link rel="stylesheet" href="/stylesheets/site-5d5eb799.css">
-        <link rel="stylesheet" href="/stylesheets/rsvp-005c2498.css">
+        <link rel="stylesheet" href="/stylesheets/rsvp-9a0666a8.css">
         <script src="/javascripts/vendor/modernizr-2.6.1.min-1b464010.js"></script>
         <script type="text/javascript" src="//use.typekit.net/scq6tfz.js"></script>
         <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
@@ -159,14 +159,59 @@
     .container { max-width: 95%; }
   </style>
 
-  {{table-component hasFooter=false columnsBinding="columns" contentBinding="arrangedContent"}}
+  <h1>Confirmed Total: {{confirmedTotal}}</h1>
+
+  {{#if selection}}
+    {{#with selection}}
+      <div class="well">
+        <h2>{{code}} {{#link-to "invite" code class="btn btn-primary"}}Edit{{/link-to}}</h2>
+
+        <h3>Guests:</h3>
+        <div class="attendees-list">
+          {{#each responses.names}}
+            <div class="input-group named">
+              <span class="input-group-addon">{{input type="checkbox" checked=isComing disabled="true"}}</span>
+              <div class="form-control">{{name}}</div>
+            </div>
+          {{/each}}
+
+          {{#each responses.guests}}
+            <div class="input-group guest">
+              <span class="input-group-addon">{{input type="checkbox" checked=isComing disabled="true"}}</span>
+              <div class="form-control">{{name}}</div>
+            </div>
+          {{/each}}
+        </div>
+
+        <h3>Details:</h3>
+
+        <table>
+          <tr>
+            <th>Email</th>
+            <td>{{email}}</td>
+          </tr>
+          <tr>
+            <th>Songs</th>
+            <td>{{songRequests}}</td>
+          </tr>
+          <tr>
+            <th>Message</th>
+            <td>{{message}}</td>
+          </tr>
+        </table>
+
+      </div>
+    {{/with}}
+  {{/if}}
+
+  {{table-component hasFooter=false columnsBinding="columns" contentBinding="arrangedContent" selectionBinding="selection"}}
 </script>
 
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.8.0.min.js"><\/script>')</script>
-        <script src="/javascripts/rsvp-3387bb10.js"></script>
+        <script src="/javascripts/rsvp-ce67f950.js"></script>
 
         <!-- Google Analytics -->
         <script>
